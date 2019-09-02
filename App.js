@@ -1,7 +1,10 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import {
   Container,
+  Content,
+  Card,
+  CardItem,
   Header,
   Footer,
   FooterTab,
@@ -12,6 +15,7 @@ import {
   Button,
   Icon,
   Title,
+  Text,
   Thumbnail,
   Image
 } from "native-base";
@@ -34,35 +38,97 @@ export default function App() {
           </Button>
         </Right>
       </Header>
-      <Text> Hello these are my thumbnails </Text>
-      <Thumbnail
-        large
-        source={{
-          uri:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLwX_KNl6cS6eEH8QMBntfGsmwLmSDGnGu27qiLFOkqIi6jYtK"
-        }}
-      />
-      <Thumbnail
-        large
-        source={{
-          uri:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuVhbxGN925J6BcDyNnfeooE95kjAv2Ck8pKBrpkm0-kBa3tDXlA"
-        }}
-      />
+      <Card>
+        <Title style={styles.title}>PineApp</Title>
+        <CardItem>
+          <Left>
+            <Thumbnail
+              source={{
+                uri:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLwX_KNl6cS6eEH8QMBntfGsmwLmSDGnGu27qiLFOkqIi6jYtK"
+              }}
+            />
+            <Body>
+              <Text>Go (B)Ananas</Text>
+              <Text note>by Punny Ananas</Text>
+            </Body>
+          </Left>
+        </CardItem>
+        <CardItem>
+          <Left>
+            <Thumbnail
+              source={{
+                uri:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuVhbxGN925J6BcDyNnfeooE95kjAv2Ck8pKBrpkm0-kBa3tDXlA"
+              }}
+            />
+            <Body>
+              <Text>Taste of Sunshine</Text>
+              <Text note>by Golden Ananas</Text>
+            </Body>
+          </Left>
+        </CardItem>
+        <Card>
+          <CardItem>
+            <Title style={styles.textStyle}>`piña un poco loca`</Title>
+          </CardItem>
+        </Card>
+        <CardItem style={styles.polkaStyle}>
+          <Text>
+            .\\..//..\\..//..\\..//..\\..//..\\..//..\\..//..\\..//..\\..//..\\..//..\\..//.
+          </Text>
+        </CardItem>
 
-      <View style={styles.container}>
-        <Text style={styles.textStyle}>
-          This is my first app using React Native ! :) maybe
-        </Text>
-      </View>
-      <Footer>
+        <CardItem>
+          <Button>
+            <Icon name="rocket" size={30} color="#990"></Icon>
+            <Text> Benefits and cool facts about this fruit</Text>
+          </Button>
+        </CardItem>
+        <Button style={styles.buttonStyle}>
+          <Icon name="globe" size={10} color="#900" />
+          <Text> Where to find the best</Text>
+        </Button>
+      </Card>
+
+      <Card>
+        <CardItem>
+          <Left>
+            <Thumbnail
+              source={{
+                uri:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYzEtpWtDVFXuWdOX-tPYnkRq_RB_sbJ26P8USZInr9nUC5FlZ"
+              }}
+            />
+            <Body>
+              <Text>Below this card should be an image</Text>
+              <Text note>but IT IS NOT WORKING</Text>
+            </Body>
+          </Left>
+        </CardItem>
+        <CardItem cardBody>
+          {/* <Image
+            source={{
+              uri:
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLwX_KNl6cS6eEH8QMBntfGsmwLmSDGnGu27qiLFOkqIi6jYtK"
+            }}
+            style={{ height: 200, width: null, flex: 1 }}
+          /> */}
+
+          <Body>
+            <Title>title of this card item</Title>
+            <Text>body text</Text>
+          </Body>
+        </CardItem>
+      </Card>
+      <Footer style={styles.footerStyle}>
         <FooterTab>
           <Button badge vertical>
             <Badge>
-              <Text>2</Text>
+              <Text>23</Text>
             </Badge>
             <Icon name="apps" />
-            <Text>Apps</Text>
+            <Text>تطبيقات</Text>
           </Button>
           <Button vertical>
             <Icon name="camera" />
@@ -77,7 +143,7 @@ export default function App() {
           </Button>
           <Button vertical>
             <Icon name="person" />
-            <Text>Contact</Text>
+            <Text>استعن بصديق</Text>
           </Button>
         </FooterTab>
       </Footer>
@@ -92,7 +158,34 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
+
+  buttonStyle: {
+    backgroundColor: "black",
+    justifyContent: "center"
+  },
+
+  polkaStyle: {
+    backgroundColor: "green",
+    alignItems: "center",
+    fontSize: 80
+  },
+
   textStyle: {
-    color: "purple"
+    color: "orange",
+    justifyContent: "center",
+    fontStyle: "italic",
+    fontSize: 40
+  },
+  footerStyle: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    bottom: 0
+  },
+  title: {
+    color: "green",
+    fontSize: 60,
+    // fontFamily:
+    backgroundColor: "gold"
   }
 });
