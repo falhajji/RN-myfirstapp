@@ -3,6 +3,8 @@
 // but no IMAGES for some reason.
 // Please help this n00b on their first RN quest
 
+image I would like https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1sxQTpbgVpIYX3YUBlX_97J_XEg9gCJ6p0_Kye7FarXpZF_L6ZQ
+
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import {
