@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import {
   Container,
   Content,
@@ -16,8 +16,7 @@ import {
   Icon,
   Title,
   Text,
-  Thumbnail,
-  Image
+  Thumbnail
 } from "native-base";
 
 export default function App() {
@@ -45,7 +44,7 @@ export default function App() {
             <Thumbnail
               source={{
                 uri:
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLwX_KNl6cS6eEH8QMBntfGsmwLmSDGnGu27qiLFOkqIi6jYtK"
+                  "https://pbs.twimg.com/profile_images/1148974811537911809/FIqAfd0l_400x400.png"
               }}
             />
             <Body>
@@ -102,23 +101,18 @@ export default function App() {
             />
             <Body>
               <Text>Below this card should be an image</Text>
-              <Text note>but IT IS NOT WORKING</Text>
+              <Text note>and now there is, thanks to Captain Huss</Text>
             </Body>
           </Left>
         </CardItem>
         <CardItem cardBody>
-          {/* <Image
+          <Image
             source={{
               uri:
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLwX_KNl6cS6eEH8QMBntfGsmwLmSDGnGu27qiLFOkqIi6jYtK"
             }}
             style={{ height: 200, width: null, flex: 1 }}
-          /> */}
-
-          <Body>
-            <Title>title of this card item</Title>
-            <Text>body text</Text>
-          </Body>
+          />
         </CardItem>
       </Card>
       <Footer style={styles.footerStyle}>
